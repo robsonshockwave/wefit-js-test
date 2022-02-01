@@ -1,6 +1,6 @@
 // ~~ MENU ~~
 const changeMenuHorizontal = (btnGroupVertical) => {
-  document.querySelector(btnGroupVertical).style.maxWidth = '525px';
+  document.querySelector(btnGroupVertical).style.maxWidth = '535px';
   document.querySelector(btnGroupVertical).style.display = 'flex';
   document.querySelector(btnGroupVertical).style.alignItems = 'center';
   document.querySelector(btnGroupVertical).style.flexDirection = 'row';
@@ -10,7 +10,7 @@ const changeMenuHorizontal = (btnGroupVertical) => {
 
   valueMenuOptions.forEach((element) => {
     element.style.borderRadius = '4px';
-    element.style.width = 'auto';
+    element.style.width = 'fit-content';
   });
 };
 
