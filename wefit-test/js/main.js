@@ -1,6 +1,6 @@
 // ~~ MENU ~~
 const changeMenuHorizontal = (btnGroupVertical) => {
-  document.querySelector(btnGroupVertical).style.maxWidth = '535px';
+  document.querySelector(btnGroupVertical).style.maxWidth = '555px';
   document.querySelector(btnGroupVertical).style.display = 'flex';
   document.querySelector(btnGroupVertical).style.alignItems = 'center';
   document.querySelector(btnGroupVertical).style.flexDirection = 'row';
