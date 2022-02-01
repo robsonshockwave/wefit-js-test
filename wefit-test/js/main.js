@@ -55,9 +55,9 @@ changeCards();
 
 // ~~ LIST ~~
 const addListItem = (text, active) => {
-  let listGroup = document.querySelector('.list-group');
-  let li = document.createElement('li');
-  let textItem = document.createTextNode(text);
+  const listGroup = document.querySelector('.list-group');
+  const li = document.createElement('li');
+  const textItem = document.createTextNode(text);
 
   li.appendChild(textItem);
   li.classList.add('list-group-item');
@@ -68,7 +68,7 @@ const addListItem = (text, active) => {
 };
 
 const changeList = () => {
-  let itemsGroupList = document.querySelectorAll('.list-group-item');
+  const itemsGroupList = document.querySelectorAll('.list-group-item');
   itemsGroupList[0].classList.remove('active');
 
   addListItem('Quarto item', 'active');
