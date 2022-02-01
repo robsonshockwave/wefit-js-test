@@ -26,3 +26,53 @@ const changeHeaderBox = (btnHeader, jumbotronHeader) => {
 };
 
 changeHeaderBox('.btn-primary', '.jumbotron');
+
+// ~~ CARDS ~~
+const changeCards = () => {
+  const allCards = document.querySelectorAll('.card');
+  const allCardsTitles = document.querySelectorAll('.card-title');
+
+  allCardsTitles.forEach((title) => {
+    const nearCard = title.closest('div.card');
+    nearCard.dataset['title'] = title.textContent;
+  });
+
+  const titleAnimal = document.querySelector('[data-title="Animais"] .btn');
+  titleAnimal.classList.remove('btn-primary');
+  titleAnimal.classList.add('btn-success');
+
+  const putLater = allCards[1].offsetParent.parentElement;
+  putLater.insertBefore(
+    allCards[2].offsetParent,
+    allCards[1].offsetParent.nextSibling
+  );
+
+  const putBefore = allCards[0].offsetParent.parentElement;
+  putBefore.insertBefore(allCards[3].offsetParent, allCards[0].offsetParent);
+};
+
+changeCards();
+
+// ~~ LIST ~~
+const addListItem = (text, active) => {
+  let listGroup = document.querySelector('.list-group');
+  let li = document.createElement('li');
+  let textItem = document.createTextNode(text);
+
+  li.appendChild(textItem);
+  li.classList.add('list-group-item');
+
+  if (active) li.classList.add(active);
+
+  listGroup.appendChild(li);
+};
+
+const changeList = () => {
+  let itemsGroupList = document.querySelectorAll('.list-group-item');
+  itemsGroupList[0].classList.remove('active');
+
+  addListItem('Quarto item', 'active');
+  addListItem('Quinto item');
+};
+
+changeList();
